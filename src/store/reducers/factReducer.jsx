@@ -3,7 +3,7 @@ export const FactsActionType = {
 };
 
 const initialState = {
-  fact: "Cats are Great!"
+  fact: "Loading..."
 };
 
 const reducer = (state = initialState, action) => {

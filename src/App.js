@@ -11,7 +11,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => dispatch(fetchFact()), []);
   return (
-    <div className="flex justify-center w-screen h-screen bg-[#F0F2F8]">
+    <div className="flex justify-center w-screen h-screen bg-[#f6f0f8]">
       <div className="flex flex-col gap-10 items-center py-20 w-[40rem]">
         {/*border border-solid border-black*/}
         <Header />
