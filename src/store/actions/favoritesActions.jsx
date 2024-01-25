@@ -10,6 +10,11 @@ export const removeFromFavoritesActionCreator = (text) => ({
   payload: text,
 });
 
-export const resetIsFavoritedActionCreator = () => ({
+export const resetIsFavoritedActionCreator = (bool) => ({
   type: FavoritesActionType.resetIsFavorite,
+  payload: bool
 });
+
+// export const isItAlreadyInFavoritesActionCreator = () => ({
+//     type: FavoritesActionType
+// })

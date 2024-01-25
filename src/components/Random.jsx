@@ -10,11 +10,12 @@ import {
 export default function Random() {
   const catFactText = useSelector((store) => store.fact.fact);
   const isFavorite = useSelector((store) => store.favorites.isFavorite);
+  const favorites = useSelector((store) => store.favorites.favorites);
 
   const dispatch = useDispatch();
 
   const factHandle = () => {
-    dispatch(fetchFact());
+    dispatch(fetchFact(favorites));
     //dispatch(resetIsFavoritedActionCreator());
   };
   const favoritesHandle = () => {

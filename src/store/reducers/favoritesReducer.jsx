@@ -27,11 +27,18 @@ const reducer = (state = initialState, action) => {
         isFavorite: true,
       };
     case FavoritesActionType.resetIsFavorite:
+      console.warn(typeof action.payload);
+      console.warn("hey");
       return {
         ...state,
-        isFavorite: false,
+        isFavorite: Boolean(action.payload),
       };
     case FavoritesActionType.removeFromFavorites:
+            setToLocalStorage(
+              "favorites",
+              state.favorites.filter((item) => item !== action.payload)
+            );
+
       return {
         ...state,
         isFavorite: false,
